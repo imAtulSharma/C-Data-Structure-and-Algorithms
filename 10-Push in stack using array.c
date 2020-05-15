@@ -5,22 +5,23 @@
 #define Max 7
 int stack[Max], Top = -1;
 
-void push_in_stack(int [], int);
+void push_in_stack(int);
 void display_stack(int []);
 
 void main()
 {
     int value;
-    
-    printf("Enter the value to be pushed in the stack:");
-    scanf("%d", &value);
 
-    push_in_stack(stack, value);
+    push_in_stack(43);
+    push_in_stack(345);
+    push_in_stack(435);
+    push_in_stack(567);
+    push_in_stack(78);
 
     display_stack(stack);
 }
 
-void push_in_stack(int stack[], int value)
+void push_in_stack(int value)
 {
     if(Top == Max-1)
     {
