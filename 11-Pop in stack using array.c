@@ -5,7 +5,7 @@
 #define Max 7
 int stack[Max], Top = -1; 
 
-void pop_in_stack(int []);
+void pop_in_stack();
 void display_stack(int []);
 
 void main()
@@ -18,13 +18,13 @@ void main()
     }
 
     display_stack(stack);
-    pop_in_stack(stack);
+    pop_in_stack();
 
     printf("After deletion of the top...");
     display_stack(stack);
 }
 
-void pop_in_stack(int stack[])
+void pop_in_stack()
 {
     if(Top == -1)
     {
