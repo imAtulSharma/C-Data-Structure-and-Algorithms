@@ -5,7 +5,7 @@
 #define Max 7
 int stack[Max], Top = -1;
 
-int peek_in_stack(int []);
+int peek_in_stack();
 void display_stack(int []);
 
 void main()
@@ -21,15 +21,15 @@ void main()
 
     display_stack(stack);
 
-    value = peek_in_stack(stack);
+    value = peek_in_stack();
 
     if(value != -1)
     {
-        printf("The topmost element in the stack is %d", value);
+        printf("The top most element in the stack is %d", value);
     }
 }
 
-int peek_in_stack(int stack[])
+int peek_in_stack()
 {   
     if(Top == -1)
     {
