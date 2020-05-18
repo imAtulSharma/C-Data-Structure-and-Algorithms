@@ -5,7 +5,7 @@
 #define Max 7
 int queue[Max], front = -1, rear = -1;
 
-void pop_in_queue(int []);
+void pop_in_queue();
 void display_queue(int []);
 
 void main()
@@ -15,19 +15,19 @@ void main()
     {   
         rear++;
         queue[rear] = i+1;
+        
         if(front == -1)
         {
             front = 0;
         }
     }
     
-
     printf("After deletion in the Queue:\n");
-    pop_in_queue(queue);
+    pop_in_queue();
     display_queue(queue);
 }
 
-void pop_in_queue(int queue[])
+void pop_in_queue()
 {
     if(front == -1 || front > rear)
     {
