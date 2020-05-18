@@ -5,7 +5,7 @@
 #define Max 7
 int queue[Max], front = -1, rear = -1;
 
-void push_in_queue(int [], int);
+void push_in_queue(int);
 void display_queue(int []);
 
 void main()
@@ -15,12 +15,12 @@ void main()
     printf("Enter the value to be pushed in the stack:");
     scanf("%d", &value);
 
-    push_in_queue(queue, value);
+    push_in_queue(value);
 
     display_queue(queue);
 }
 
-void push_in_queue(int queue[], int value)
+void push_in_queue(int value)
 {
     if(rear == Max-1)
     {
