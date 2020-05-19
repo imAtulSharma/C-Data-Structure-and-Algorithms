@@ -5,7 +5,7 @@
 #define Max 7
 int queue[Max], front = -1, rear = -1;
 
-int peek_in_queue(int []);
+int peek_in_queue();
 void display_queue(int []);
 
 void main()
@@ -24,11 +24,16 @@ void main()
     }
     
     printf("After deletion in the Queue:\n");
-    value = peek_in_queue(queue);
-    printf("The value in the queue is %d", value);
+
+    value = peek_in_queue();
+
+    if(value != -1)
+    {
+        printf("The value in the queue is %d", value);
+    }
 }
 
-int peek_in_queue(int queue[])
+int peek_in_queue()
 {   
     if(front == -1 || front > rear)
     {
